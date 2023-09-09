@@ -12,7 +12,8 @@ fetch(url)
     .then(data => { 
         console.log(data)
         if (data.status === 1 ) {
-            //call additional stuff
+            const item = new ProductInfo(data.product)
+            item.testCall()
         } else {
             alert(`Product ${inputVal} was not found. Please try another`)
         }
@@ -20,4 +21,15 @@ fetch(url)
     .catch(err => {
         console.log(`error ${err}`)
     });
+}
+
+class ProductInfo {
+    constructor(productData) {
+        this.name = productData.product_name
+        this.ingredients = productData.ingredients
+        this.image = productData.image_url
+    }
+    testCall() {
+        console.log(this.ingredients)
+    }
 }
