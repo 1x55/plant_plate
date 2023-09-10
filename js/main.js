@@ -15,6 +15,7 @@ fetch(url)
             const item = new ProductInfo(data.product)
             // item.testCall()
             item.showInfo()
+            item.listIngredients();
         } else {
             alert(`Product ${inputVal} was not found. Please try another`)
         }
@@ -41,9 +42,16 @@ class ProductInfo {
 
     listIngredients() {
         let table = document.getElementById('ingredient-table')
+        //table need to be refreshed when displaying new item, otherwise, contents will reamin as append continues
+
+        // for (let i = 1; i < table.rows.length;) {
+        //     table.deleteRow(i)
+        // }
+        for (let i = table.rows.length - 1; i >= 1; i--) {
+            table.deleteRow(i);
+        }
 
         //use for-in loop to iterate over the properties of an object. 
-
         for(let key in this.ingredients) {
             let newRow = table.insertRow(-1)
             let newIngredientCell = newRow.insertCell(0)
@@ -51,13 +59,11 @@ class ProductInfo {
 
             let newIngredientText = document.createTextNode(this.ingredients[key].text)
             
-            let vegStatus = this.ingredients[key].vegetarian
+            let vegStatus = this.ingredients[key].vegetarian == null ? 'unkown' : this.ingredients[key].vegetarian
             let newVegetarianText = document.createTextNode(vegStatus)
 
             newIngredientCell.appendChild(newIngredientText)
             newVegetarianCell.appendChild(newVegetarianText)
-        }
-
-         
+        }   
     }
 }
