@@ -20,7 +20,7 @@ Plant Plate allows users to check if a product is vegetarian or not. Here's a br
 - https://plant-plate.netlify.app/
 
 **Tech used:** 
-- HTML, CSS, JavaScript, Tailwind, DaisyUI and CSS Theme-Change
+- HTML, CSS, JavaScript, Tailwind CSS, DaisyUI and CSS Theme-Change
 
 ## Lessons Learned:
 - API Integration: successfully integrated the Open Food Facts API to fetch and display product information based on barcode inputs, demonstrating your ability to work with external data sources.
