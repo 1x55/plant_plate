@@ -59,11 +59,18 @@ class ProductInfo {
 
             let newIngredientText = document.createTextNode(this.ingredients[key].text)
             
-            let vegStatus = this.ingredients[key].vegetarian == null ? 'unkown' : this.ingredients[key].vegetarian
+            let vegStatus = this.ingredients[key].vegetarian == null ? 'unknown' : this.ingredients[key].vegetarian
             let newVegetarianText = document.createTextNode(vegStatus)
 
             newIngredientCell.appendChild(newIngredientText)
             newVegetarianCell.appendChild(newVegetarianText)
+
+            //add background colors to indicate vegetarian status
+            if (vegStatus === 'no') {
+                newVegetarianCell.classList.add('non-veg-item')
+            } else if (vegStatus === 'unknown' || vegStatus === 'maybe') {
+                newVegetarianCell.classList.add('unknown-maybe-item')
+            }
         }   
     }
 }

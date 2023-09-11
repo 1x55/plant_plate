@@ -1,3 +1,14 @@
+:root {
+    --my-color: #fff;
+    /* or any other variables/style */
+  }
+  [data-theme='dark'] {
+    --my-color: #000;
+  }
+  [data-theme='pink'] {
+    --my-color: #ffabc8;
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -7,16 +18,19 @@
 body {
     text-align: center;
     font-size: 1.3rem;
+    min-height: 100vh;
+    background-color: var(--my-color);
 }
 
-input {
+/* input {
     width: 200px;
-}
+} */
 
-button {
+/* button {
+    border: 1px solid red;
     margin: 20px auto;
-    display: block
-}
+    display: block;
+} */
 
 img {
     max-height: 300px;   
@@ -31,7 +45,13 @@ table, th, td {
     background-color: white;
 }
  
+.non-veg-item {
+    background-color: red;
+}
 
+.unknown-maybe-item {
+    background-color: yellow;
+}
 
 
 

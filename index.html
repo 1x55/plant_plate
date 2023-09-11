@@ -6,29 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Plate</title> 
     <link rel="stylesheet" href="css/style.css">    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- themes -->
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 </head> 
+
 <body>
+    <div class="navbar bg-base-content">
+        <a class="btn btn-ghost normal-case text-xl"></a>
+      
+        <div class="m-5">
+            <h2 class="mb-4 text-2xl text-green-700 font-bold"></h2>
+            🌞
+            <div class="inline-block w-10">
+                <span data-toggle-theme="dark" data-act-class="pl-4" class="border rounded-full border-green-700 flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0">
+                    <span class="rounded-full w-3 h-3 m-1 bg-green-700">
+                    </span>
+                </span>
+            </div>
+            🌚
+        </div>
+    </div>
 
-    <h1>Check if Item is Vegetarian</h1>
+    <div class="hero min-h-screen">
+        <div class="text-center hero-content">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">
+                Check if Item is Vegetarian
+                </h1> 
+            <p class="mb-5">
+                "Discover the Ultimate Plant-Powered Assistant: Plant Plate!
+                🌱 Unlock Your Food's Secrets 🌱.
+                </p> 
 
-    <!-- input box -->
-    <label for="barcode">Enter a UPC barcode  number (12 digits)</label>
-    <input type="number" id="barcode" name="barcode">
-    
-    <button type="button" onClick = "getFetch();">Get Value</button>
+               <!-- input box -->
+                    <label for="barcode">Enter a UPC barcode  number (12 digits)</label>
+                    <input type="number" id="barcode" name="barcode" class="input input-primary w-full max-w-xs" >
+                    
+                    <button class="btn btn-primary" onClick = "getFetch();">Get Value</button>
 
-    <img  id="product-img" src=" " alt="">
-    <h2 id="product-name"></h2>
+                    <!-- <img id="product-img" src=" " alt="">
+                    <h2 id="product-name"></h2> -->
 
-    <!-- add table for ingredients -->
-    <table id="ingredient-table">
-        <tr>
-            <th>Ingredient</th>
-            <th>Vegetarian</th>
-        </tr>
+                    <div class="card">
+                        <figure>
+                            <img id="product-img" src=" " alt="">
+                        </figure> 
+                        <div class="card-body">
+                          <h2 class="badge mx-2 card-title" id="product-name"></h2>    
+                        </div>
+                    </div>    
 
-    </table>
+                    <!-- add table for ingredients -->
+                    <table id="ingredient-table">
+                        <tr>
+                            <th>Ingredient</th>
+                            <th>Vegetarian</th>
+                        </tr>
+
+                    </table>
+                        </div>
+                        </div>
+                    </div>
+                    
+
+  
     
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
+
+<!-- <div class="card">
+  <figure>
+    <img src="https://picsum.photos/id/1005/400/250">
+  </figure> 
+  <div class="card-body">
+    <h2 class="card-title">Top image
+      <div class="badge mx-2 badge-secondary">NEW</div>
+    </h2> 
+    <p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p> 
+    <div class="justify-end card-actions">
+      <button class="btn btn-secondary">More info</button>
+    </div>
+  </div>
+</div>  -->
