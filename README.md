@@ -23,7 +23,7 @@ Plant Plate allows users to check if a product is vegetarian or not. Here's a br
 - HTML, CSS, JavaScript, Tailwind CSS, DaisyUI and CSS Theme-Change
 
 ## Lessons Learned:
-- API Integration: successfully integrated the Open Food Facts API (https://world.openfoodfacts.org/discover) to fetch and display product information based on barcode inputs, demonstrating your ability to work with external data sources.
+- API Integration: successfully integrated the Open Food Facts API (https://world.openfoodfacts.org) to fetch and display product information based on barcode inputs, demonstrating your ability to work with external data sources.
 
 - Handling Row Deletion: discovered that using i++ in a loop to delete rows can lead to skipping rows, causing unintended deletions.
 The solution you learned is to iterate through the rows in reverse order (i-- or for (let i = table.rows.length - 1; i >= 1; i--)) to prevent skipping and accurately delete rows from the table. This approach ensures that all rows are properly removed without any unintended omissions.
